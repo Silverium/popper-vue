@@ -8,5 +8,5 @@ export interface InstallableComponent extends VueConstructor<Vue> {
   install: InstallFunction;
 }
 
-declare const VuePopper: InstallableComponent;
-export default VuePopper;
+declare const PopperVue: InstallableComponent;
+export default PopperVue;

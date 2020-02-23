@@ -69,7 +69,7 @@ if (!argv.format || argv.format === 'es') {
     ...baseConfig,
     external,
     output: {
-      file: 'dist/vue-popper.esm.js',
+      file: 'dist/popper-vue.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -99,9 +99,9 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-popper.ssr.js',
+      file: 'dist/popper-vue.ssr.js',
       format: 'cjs',
-      name: 'VuePopper',
+      name: 'PopperVue',
       exports: 'named',
       globals,
     },
@@ -127,9 +127,9 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/vue-popper.min.js',
+      file: 'dist/popper-vue.min.js',
       format: 'iife',
-      name: 'VuePopper',
+      name: 'PopperVue',
       exports: 'named',
       globals,
     },

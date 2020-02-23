@@ -1,7 +1,7 @@
 import _Vue, { PluginFunction, VueConstructor } from 'vue';
 
 // Import vue component
-import component from '@/vue-popper.vue';
+import component from '@/popper-vue.vue';
 
 // Define typescript interfaces for autoinstaller
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -13,10 +13,10 @@ interface InstallableComponent extends VueConstructor<_Vue> {
 }
 
 // install function executed by Vue.use()
-const install: InstallFunction = function installVuePopper(Vue: typeof _Vue) {
+const install: InstallFunction = function installPopperVue(Vue: typeof _Vue) {
   if (install.installed) return;
   install.installed = true;
-  Vue.component('VuePopper', component);
+  Vue.component('PopperVue', component);
 };
 
 // Create module definition for Vue.use()
