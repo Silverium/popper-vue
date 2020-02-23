@@ -1,7 +1,7 @@
 {
-  "name": "popper-vue",
+  "name": "@soldeplata/popper-vue",
   "version": "1.0.0",
-  "description": "",
+  "description": "Popperjs implemented in a vue single file component",
   "main": "dist/popper-vue.ssr.js",
   "browser": "dist/popper-vue.esm.js",
   "module": "dist/popper-vue.esm.js",
@@ -50,5 +50,23 @@
   },
   "engines": {
     "node": ">=8"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silverium/popper-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "popper",
+    "popperjs",
+    "popup",
+    "tooltip",
+    "vuejs"
+  ],
+  "author": "soldeplatadeveloper@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Silverium/popper-vue/issues"
+  },
+  "homepage": "https://github.com/Silverium/popper-vue#readme"
 }
