@@ -3,14 +3,13 @@ import Vue from 'vue';
 import {createPopper, Instance} from '@popperjs/core';
 
 interface PopperVueData {
-  vuePopperInstance: Instance|undefined;
+  vuePopperInstance: Instance | undefined;
 }
 
 export default Vue.extend({
   name: 'PopperVue',
   model: {
     prop: 'show',
-    event: 'change',
   },
   props: {
     arrow: {
@@ -55,7 +54,7 @@ export default Vue.extend({
     this.vuePopperInstance = createPopper(
       this.$refs.reference as HTMLElement,
       this.$refs.popper as HTMLElement,
-      this.options
+      this.options,
     );
     this.$emit('popper', this.vuePopperInstance);
   },
@@ -109,6 +108,11 @@ $arrow-half: $arrow-size / 2;
       #{$block}__arrow_wrapper {
         right: -$arrow-half;
       }
+    }
+    /* Hide the popper when the reference is hidden */
+    &[data-popper-reference-hidden] {
+      visibility: hidden;
+      pointer-events: none;
     }
   }
 
