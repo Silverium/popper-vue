@@ -15,6 +15,8 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve src/serve-dev.ts",
+    "build-gh-pages": "vue-cli-service build src/serve-dev.ts",
+    "deploy-gh-pages": "git checkout -B gh-pages && npm run build-gh-pages && git add dist -f && git commit dist -m 'gh-pages' --no-verify && git subtree push --prefix dist origin gh-pages && git checkout master && git branch -D gh-pages",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
