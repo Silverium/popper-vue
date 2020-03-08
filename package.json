@@ -1,6 +1,6 @@
 {
   "name": "@soldeplata/popper-vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Popperjs implemented in a vue single file component",
   "main": "dist/popper-vue.ssr.js",
   "browser": "dist/popper-vue.esm.js",
@@ -22,34 +22,34 @@
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
   "dependencies": {
-    "@popperjs/core": "^2.0.6"
+    "@popperjs/core": "^2.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "@babel/preset-typescript": "^7.8.3",
     "@rollup/plugin-alias": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-replace": "^2.3.1",
     "@types/lodash": "^4.14.149",
-    "@vue/cli-plugin-babel": "^4.2.2",
-    "@vue/cli-plugin-typescript": "^4.2.2",
-    "@vue/cli-service": "^4.2.2",
-    "cross-env": "^6.0.3",
+    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-typescript": "^4.2.3",
+    "@vue/cli-service": "^4.2.3",
+    "cross-env": "^7.0.2",
     "lodash": "4.17.15",
     "minimist": "^1.2.0",
     "node-sass": "^4.13.1",
-    "rollup": "^1.31.1",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup": "^2.0.2",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-vue": "^5.1.6",
     "sass-loader": "^8.0.2",
-    "typescript": "^3.8.2",
+    "typescript": "^3.8.3",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.11"
   },
   "engines": {
     "node": ">=8"

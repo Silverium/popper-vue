@@ -1,3 +1,8 @@
+
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@soldeplata/popper-vue)
+![npm](https://img.shields.io/npm/dm/@soldeplata/popper-vue) 
+ ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@soldeplata/popper-vue)
+
 # Popper for Vue
 **Simple, powerful, configurable. Popper v2.x!!**
 

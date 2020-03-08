@@ -4,8 +4,7 @@ import { createPopper } from '@popperjs/core';
 var script = Vue.extend({
   name: 'PopperVue',
   model: {
-    prop: 'show',
-    event: 'change'
+    prop: 'show'
   },
   props: {
     arrow: {
@@ -236,8 +235,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-614e6e20_0", {
-    source: ".popper-vue__popper[data-popper-placement^=top] .popper-vue__arrow_wrapper{bottom:-4px}.popper-vue__popper[data-popper-placement^=bottom] .popper-vue__arrow_wrapper{top:-4px}.popper-vue__popper[data-popper-placement^=right] .popper-vue__arrow_wrapper{left:-4px}.popper-vue__popper[data-popper-placement^=left] .popper-vue__arrow_wrapper{right:-4px}.popper-vue__arrow{width:100%;height:100%;transform:rotate(45deg) scale(.7071)}.popper-vue__arrow,.popper-vue__arrow_wrapper{position:absolute;z-index:-1}.popper-vue__arrow_wrapper{width:8px;height:8px}",
+  inject("data-v-c9bef8ec_0", {
+    source: ".popper-vue__popper[data-popper-placement^=top] .popper-vue__arrow_wrapper{bottom:-4px}.popper-vue__popper[data-popper-placement^=bottom] .popper-vue__arrow_wrapper{top:-4px}.popper-vue__popper[data-popper-placement^=right] .popper-vue__arrow_wrapper{left:-4px}.popper-vue__popper[data-popper-placement^=left] .popper-vue__arrow_wrapper{right:-4px}.popper-vue__popper[data-popper-reference-hidden]{visibility:hidden;pointer-events:none}.popper-vue__arrow{width:100%;height:100%;transform:rotate(45deg) scale(.7071)}.popper-vue__arrow,.popper-vue__arrow_wrapper{position:absolute;z-index:-1}.popper-vue__arrow_wrapper{width:8px;height:8px}",
     map: undefined,
     media: undefined
   });
