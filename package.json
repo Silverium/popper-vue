@@ -21,7 +21,7 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
     "test": "vue-cli-service test:unit",
-    "codecov": "codecov --token=secrets.CODECOV_TOKEN",
+    "codecov": "codecov --token=1c7d64a9-097d-45a6-bbe6-389189b62a79",
     "testing": "vue-cli-service test:unit --coverage --watch"
   },
   "dependencies": {
