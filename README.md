@@ -5,6 +5,7 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@soldeplata/popper-vue)
 ![npm](https://img.shields.io/npm/dm/@soldeplata/popper-vue) 
  ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@soldeplata/popper-vue)
+![Node.js CI](https://github.com/Silverium/popper-vue/workflows/Node.js%20CI/badge.svg)
 
 ### Example
 https://silverium.github.io/popper-vue/
