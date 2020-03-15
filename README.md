@@ -1,4 +1,4 @@
-![Codecov](https://img.shields.io/codecov/c/github/Silverium/popper-vue?token=1c7d64a9-097d-45a6-bbe6-389189b62a79)
+![Codecov](https://img.shields.io/codecov/c/gh/Silverium/popper-vue)
 ![npm](https://img.shields.io/npm/v/@soldeplata/popper-vue)
 ![npm peer dependency version](https://img.shields.io/npm/dependency-version/@soldeplata/popper-vue/peer/vue)
 ![GitHub package.json dependency version (prod)](https://img.shields.io/github/package-json/dependency-version/Silverium/popper-vue/@popperjs/core)
