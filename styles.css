@@ -4,6 +4,18 @@
 /* purgecss end ignore */
 @tailwind utilities;
 
+body {
+  @apply .p-1;
+}
+
+h1 {
+  @apply .text-3xl .font-bold;
+}
+
+h2 {
+  @apply .text-2xl .font-bold;
+}
+
 .btn {
   @apply font-bold rounded p-2;
 }

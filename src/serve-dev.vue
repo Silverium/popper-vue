@@ -46,7 +46,7 @@
 <template>
   <section id="app">
     <article class="py-12" />
-    <h1>
+    <h1 class="text-3xl">
       Examples built with <a href="https://www.npmjs.com/package/@soldeplata/popper-vue" target="_blank">popper-vue </a>
     </h1>
     <section>
