@@ -1,6 +1,6 @@
 <script lang="ts">
 import Vue from 'vue';
-import {createPopper, Instance} from '@popperjs/core';
+import { createPopper, Instance } from '@popperjs/core';
 
 interface PopperVueData {
   vuePopperInstance: Instance | undefined;
@@ -73,9 +73,9 @@ export default Vue.extend({
         <span :class="['popper-vue__arrow', arrowClass]" />
       </span>
     </span>
-    <span ref="reference" role="button">
+    <div class="popper-vue__reference" ref="reference" role="button">
       <slot />
-    </span>
+    </div>
   </div>
 </template>
 
@@ -131,6 +131,10 @@ $arrow-half: $arrow-size / 2;
       width: $arrow-size; // sqrt(2)
       height: $arrow-size;
     }
+  }
+
+  &__reference {
+    display: inline-block;
   }
 }
 </style>
