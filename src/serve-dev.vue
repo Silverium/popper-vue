@@ -45,7 +45,7 @@
 
 <template>
   <section id="app">
-    <div class="separator" />
+    <article class="py-12" />
     <h1>
       Examples built with <a href="https://www.npmjs.com/package/@soldeplata/popper-vue" target="_blank">popper-vue </a>
     </h1>
@@ -66,16 +66,16 @@
       <p>
         Feel free to resize and scroll inside the frame 😄
       </p>
-      <article class="container margin-auto scrollable" id="tooltipContainer">
+      <article class="container m-auto scrollable overflow-auto" id="tooltipContainer">
         <section class="overflowed">
           <Tooltip :show="showTooltip" class="offset-300" boundary-id="tooltipContainer" :options="{placement: 'auto-start'}">
-            <button @click="setShowTooltip(true)" @touchstart="setShowTooltip(true)" class="btn btn-green">
+            <button @click="setShowTooltip(true)" @touchstart="setShowTooltip(true)" class="btn bg-green-400 text-white p-2 hover:bg-green-600">
               I have a tooltip activated on click
             </button>
             <template #tooltip>
-              <article class="flex">
-                <p> I am the tooltiped element </p>
-                <button @click="setShowTooltip(false)" class="ml btn btn-red">X</button>
+              <article class="flex flex-center">
+                <p class="p-2"> I am the tooltiped element </p>
+                <button @click="setShowTooltip(false)" class="ml-3 btn bg-red-500 hover:bg-red-700">X</button>
               </article>
             </template>
           </Tooltip>
@@ -90,7 +90,7 @@
       <p>
         This example consists in a popup element that changes position every second, in a clock-wise fashion.
       </p>
-      <article class="container margin-auto scrollable h-500 flex flex-center">
+      <article class="container m-auto scrollable overflow-auto h-500 flex flex-center justify-center items-center">
         <popper-vue :show="showClock" :options="{placement,modifiers: [
             {
               name: 'offset',
@@ -99,23 +99,23 @@
               },
             },
             
-          ],}" popper-class="shadow">
-          <button @click="toggleShowClock" class="btn btn-yellow">
-            I have a tooltip toggled on click
-          </button>
+          ],}" popper-class="shadow-lg">
           <template #popper>
-            <article class="white-and-grey tooltip">
+            <article class="text-gray-500 bg-white rounded shadow-lg p-3">
               <div role="paragraph"> I am the popped element </div>
-              <div class="separator" />
+              <div class="py-8" />
               <div role="paragraph"> Size is not an issue </div>
             </article>
           </template>
+          <button @click="toggleShowClock" class="btn bg-blue-500 text-white hover:bg-blue-700">
+            I have a tooltip toggled on click
+          </button>
         </popper-vue>
       </article>
     </section>
   </section>
 </template>
-<style lang="scss">
+<style lang="postcss">
   body {
     background-color: lightgoldenrodyellow;
   }
@@ -134,20 +134,6 @@
     }
   }
 
-  .black-and-white {
-    color: white;
-    background-color: black;
-  }
-
-  .white-and-grey {
-    color: darkgray;
-    background-color: white;
-  }
-
-  .tooltip {
-    border-radius: 4px;
-    padding: 8px;
-  }
 
   .container {
     width: 600px;
@@ -158,16 +144,8 @@
 
   .scrollable {
     max-height: 320px;
-    overflow: auto;
   }
 
-  .margin-auto {
-    margin: auto;
-  }
-
-  .separator {
-    padding-top: 3em;
-  }
 
   .overflowed {
     width: 2000px;
@@ -183,73 +161,5 @@
 
   .h-500 {
     height: 500px;
-  }
-
-  .ml,
-  .mx {
-    margin-left: 12px;
-  }
-
-  .mr,
-  .mx {
-    margin-right: 12px;
-  }
-
-  .flex {
-    display: flex;
-
-    &-center {
-      align-items: center;
-      justify-content: center;
-    }
-  }
-
-  @mixin button-bg($bg) {
-    background: $bg;
-
-    &:hover {
-      background: darken($bg, 8%);
-      transition: all 0.3s ease;
-    }
-
-    &:active {
-      background: darken($bg, 25%);
-    }
-  }
-
-  .btn {
-    color: white;
-    text-decoration: none;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 1em;
-
-
-    &-green {
-      @include button-bg(#2ecc71);
-    }
-
-    &-blue {
-      @include button-bg(#3498db);
-    }
-
-    &-yellow {
-      @include button-bg(#f1c40f);
-    }
-
-    &-red {
-      @include button-bg(#e74c3c);
-    }
-  }
-
-  .center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .shadow {
-    box-shadow: 0px 0px 25px 6px rgba(0, 0, 0, 0.52);
   }
 </style>

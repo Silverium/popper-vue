@@ -53,7 +53,7 @@ export default Vue.extend({
         name: 'preventOverflow',
         options: {
           boundary,
-          rootBoundary: 'document',
+          rootBoundary: 'document.body',
         },
       };
       this.tooltipOptions.modifiers.push(boundaryModifier);
@@ -64,15 +64,15 @@ export default Vue.extend({
 
 <template>
   <popper-vue
-    popper-class="fade"
+    popper-class="fade rounded-md shadow-lg"
     arrow
-    arrow-class="black-and-white"
+    arrow-class="bg-black text-white shadow-lg"
     :show="show"
     :options="tooltipOptions"
   >
     <slot />
     <template #popper>
-      <section class="black-and-white tooltip">
+      <section class="bg-black text-white rounded-md">
         <slot name="tooltip" />
       </section>
     </template>
