@@ -26,7 +26,7 @@ It relies in [@popper/core](https://www.npmjs.com/package/@popperjs/core) packag
   ```
 #### npm
   ```console
-  nmp i @soldeplata/popper-vue
+  npm i @soldeplata/popper-vue
   ```
 ## Usage
 
