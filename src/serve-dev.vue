@@ -21,6 +21,7 @@ export default Vue.extend({
     toggleTooltip() {
       try {
         this.showTooltip = !this.showTooltip;
+        console.log("this.showTooltip", this.showTooltip);
       } catch (error) {
         console.error(error);
       }
