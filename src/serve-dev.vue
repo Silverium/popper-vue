@@ -18,9 +18,9 @@ export default Vue.extend({
     };
   },
   methods: {
-    setShowTooltip(value: boolean) {
+    toggleTooltip() {
       try {
-        this.showTooltip = value;
+        this.showTooltip = !this.showTooltip;
       } catch (error) {
         console.error(error);
       }
@@ -82,7 +82,7 @@ export default Vue.extend({
             :options="{placement: 'auto-start'}"
           >
             <button
-              @click="()=>setShowTooltip(true)"
+              @click="toggleTooltip"
               class="btn bg-green-400 text-white p-2 hover:bg-green-600"
             >
               I have a tooltip activated on click
@@ -91,7 +91,7 @@ export default Vue.extend({
               <article class="flex flex-center">
                 <p class="p-2"> I am the tooltiped element </p>
                 <button
-                  @click="()=>setShowTooltip(false)"
+                  @click="toggleTooltip"
                   class="ml-3 btn bg-red-500 hover:bg-red-700"
                 >
                   X
