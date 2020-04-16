@@ -82,14 +82,14 @@ export default Vue.extend({
 .fade {
   display: inherit !important;
   /* override v-show display: none */
-  transition: opacity 1.3s;
+  transition: opacity 0.3s;
 
   &[style*="display: none;"] {
     pointer-events: none;
     /* disable user interaction */
     user-select: none;
     /* disable user selection */
-    opacity: 0;
+    opacity: 0 !important;
   }
 }
 </style>
