@@ -1,47 +1,47 @@
 <script lang="ts">
-import Vue from 'vue';
-import _ from 'lodash';
-import PopperVue from './popper-vue.vue';
+import Vue from "vue";
+import _ from "lodash";
+import PopperVue from "./popper-vue.vue";
 
 export default Vue.extend({
-  name: 'TooltipExample',
+  name: "TooltipExample",
   components: {
-    PopperVue,
+    PopperVue
   },
   props: {
     show: {
-      type: Boolean,
+      type: Boolean
     },
     options: {
       type: Object,
-      default: () => {},
+      default: () => {}
     },
     boundaryId: {
-      type: String,
-    },
+      type: String
+    }
   },
   data() {
     return {
       tooltipOptions: _.merge(
         {
-          placement: 'right',
+          placement: "right",
           modifiers: [
             {
-              name: 'offset',
+              name: "offset",
               options: {
-                offset: [0, 10], // separation from reference object
-              },
+                offset: [0, 10] // separation from reference object
+              }
             },
             {
-              name: 'arrow',
+              name: "arrow",
               options: {
-                padding: 4, // 4px from the edges of the popper
-              },
-            },
-          ],
+                padding: 4 // 4px from the edges of the popper
+              }
+            }
+          ]
         },
-        this.options,
-      ),
+        this.options
+      )
     };
   },
 
@@ -50,15 +50,15 @@ export default Vue.extend({
       const boundary =
         document.getElementById(this.boundaryId) ?? document.body;
       const boundaryModifier = {
-        name: 'preventOverflow',
+        name: "preventOverflow",
         options: {
           boundary,
-          rootBoundary: 'document.body',
-        },
+          rootBoundary: "document.body"
+        }
       };
       this.tooltipOptions.modifiers.push(boundaryModifier);
     }
-  },
+  }
 });
 </script>
 
@@ -78,3 +78,18 @@ export default Vue.extend({
     </template>
   </popper-vue>
 </template>
+<style lang="scss">
+.fade {
+  display: inherit !important;
+  /* override v-show display: none */
+  transition: opacity 1.3s;
+
+  &[style*="display: none;"] {
+    pointer-events: none;
+    /* disable user interaction */
+    user-select: none;
+    /* disable user selection */
+    opacity: 0;
+  }
+}
+</style>

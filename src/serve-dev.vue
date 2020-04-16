@@ -19,12 +19,7 @@ export default Vue.extend({
   },
   methods: {
     toggleTooltip() {
-      try {
-        this.showTooltip = !this.showTooltip;
-        console.log("this.showTooltip", this.showTooltip);
-      } catch (error) {
-        console.error(error);
-      }
+      this.showTooltip = !this.showTooltip;
     },
     toggleShowClock() {
       this.showClock = !this.showClock;
@@ -146,20 +141,6 @@ export default Vue.extend({
 <style lang="postcss">
 body {
   background-color: lightgoldenrodyellow;
-}
-
-.fade {
-  display: inherit !important;
-  /* override v-show display: none */
-  transition: opacity 0.3s;
-
-  &[style*="display: none;"] {
-    pointer-events: none;
-    /* disable user interaction */
-    user-select: none;
-    /* disable user selection */
-    opacity: 0;
-  }
 }
 
 .container {
