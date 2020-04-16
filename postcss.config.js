@@ -6,16 +6,15 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
     './src/**/*.jsx',
     // etc.
   ],
-
   // Include any special characters you're using in this regular expression
-  defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+  defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
 });
 module.exports = {
   plugins: [
     require('postcss-custom-properties'),
     require('postcss-import'),
     require('tailwindcss'),
-    require('postcss-preset-env')({stage: 1}),
+    require('postcss-preset-env')({ stage: 1 }),
     require('postcss-nested'),
     require('autoprefixer'),
     ...(process.env.NODE_ENV === 'production' ? [purgecss] : []),

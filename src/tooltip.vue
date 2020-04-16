@@ -78,7 +78,8 @@ export default Vue.extend({
     </template>
   </popper-vue>
 </template>
-<style lang="scss">
+<style lang="postcss">
+/* purgecss start ignore */
 .fade {
   display: inherit !important;
   /* override v-show display: none */
@@ -89,7 +90,8 @@ export default Vue.extend({
     /* disable user interaction */
     user-select: none;
     /* disable user selection */
-    opacity: 0 !important;
+    opacity: 0;
   }
 }
+/* purgecss end ignore */
 </style>
