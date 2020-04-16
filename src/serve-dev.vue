@@ -78,8 +78,7 @@ export default Vue.extend({
             :options="{placement: 'auto-start'}"
           >
             <button
-              @click.native="setShowTooltip(true)"
-              @touchend="setShowTooltip(true)"
+              @click="setShowTooltip(true)"
               class="btn bg-green-400 text-white p-2 hover:bg-green-600"
             >
               I have a tooltip activated on click
@@ -88,8 +87,7 @@ export default Vue.extend({
               <article class="flex flex-center">
                 <p class="p-2"> I am the tooltiped element </p>
                 <button
-                  @click.native="setShowTooltip(false)"
-                  @touchend="setShowTooltip(false)"
+                  @click="setShowTooltip(false)"
                   class="ml-3 btn bg-red-500 hover:bg-red-700"
                 >
                   X
