@@ -1,6 +1,6 @@
 {
   "name": "@soldeplata/popper-vue",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Popperjs implemented in a vue single file component",
   "main": "dist/popper-vue.ssr.js",
   "browser": "dist/popper-vue.esm.js",
